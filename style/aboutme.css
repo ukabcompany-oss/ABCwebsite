@@ -1,0 +1,42 @@
+.about-container .cards {
+    transform: rotate(-14.819deg);
+    position: relative;
+    right: 100px;
+    height: 348px;
+    box-shadow: 35.50142px 19.56201px 67.38026px 0px rgba(87, 87, 87, 0.30);
+}
+
+.aboutme {
+    /* max-width: 948px; */
+    border: 1px solid #CCC;
+    /* margin: 0px auto; */
+    margin-bottom: 158px;
+    padding: 0px 24px;
+
+}
+@media only screen and (min-width: 1100px)
+{
+    .w-1100{
+      width: 1100px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+}
+@media (max-width: 400px) {
+    .aboutme {
+        padding: 0px 0px !important;
+        margin-bottom: 64px;
+    }
+}
+
+h1 {
+    font-family: 'International', sans-serif;
+    font-size: 52.369px;
+    margin-top: 192px;
+}
+
+p {
+    color: #2C2C2C;
+    font-weight: 300;
+    font-size: 16px;
+}

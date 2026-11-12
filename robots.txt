@@ -1,0 +1,5 @@
+# A Baker's Confession
+User-agent: *
+Allow: /
+
+Sitemap: https://abakersconfession.co.uk/sitemap.xml
