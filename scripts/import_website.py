@@ -4,11 +4,11 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import quote
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 MARKER = ROOT / '.website-import-complete'
-SOURCE = 'https://3b9191f1.a-bakers-confession.pages.dev/'
+SOURCE = 'https://abakersconfession.co.uk/'
 
 def main():
     if MARKER.exists():
@@ -22,7 +22,7 @@ def main():
         error = None
         for _ in range(3):
             try:
-                with urlopen(SOURCE + quote(path), timeout=60) as response:
+                with urlopen(Request(SOURCE + quote(path), headers={'User-Agent': 'ABCWebsite-Import/1.0'}), timeout=60) as response:
                     data = response.read()
                 expected = inventory['sha256'].get(path)
                 if expected and hashlib.sha256(data).hexdigest() != expected:

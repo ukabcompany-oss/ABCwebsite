@@ -1,4 +1,5 @@
 name: Import published website once
+# Import from the live public domain; deployment URL rejects automated requests.
 on:
   push:
     branches: [main]
