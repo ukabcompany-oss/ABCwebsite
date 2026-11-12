@@ -1,5 +1,5 @@
 #abc-consent, .abc-embed-notice, .abc-cookie-declaration { font-family: Arial, sans-serif; color: #29232a; font-size: 15px; line-height: 1.6; }
-#abc-consent *, .abc-embed-notice * { box-sizing: border-box; }
+#abc-consent *, .abc-embed-notice * { box-sizing: border-box; text-transform: none; }
 #abc-consent [hidden], .abc-embed-notice[hidden], iframe[data-consent-src][hidden] { display: none !important; }
 #abc-consent button, .abc-embed-notice button, .abc-cookie-declaration button { font: inherit; cursor: pointer; text-transform: none; letter-spacing: 0; }
 #abc-consent a, .abc-embed-notice a, .abc-cookie-declaration a { color: #853650; text-decoration: underline; text-underline-offset: 3px; }
