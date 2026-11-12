@@ -16,6 +16,11 @@ Support adding, modifying, reordering, and removing menu items, package entries,
 
 Preserve the branding and responsive layout. Keep public content in the HTML so crawlers can read it without running JavaScript. Avoid unnecessary frameworks or paid services.
 
+## Cookie consent
+All public HTML pages load js/cookie-consent.js and style/cookie-consent.css. Optional service loaders live only in that script. Do not add direct Google Tag Manager, MailerLite, Cloudflare browser analytics, or third-party video/form scripts to page HTML. Do not restore the GTM noscript iframe: it bypasses consent. Tally and YouTube iframes must use data-consent-src (no src before opt-in), a data-consent-category of forms or media, and an accessible placeholder with a direct contact alternative. Use the same pattern for new optional embeds. The existing GTM container loads only when both analytics and marketing are allowed because its internal tag inventory has not been audited.
+
+Keep cookie-declaration.html and the service descriptions up to date. Increment the consent VERSION if purposes or services change materially. Cookie settings must remain available on every page; reject and accept must be equally easy. Test first visit, reject, category-only selection, accept, persistence and withdrawal/reload before publishing changes. This custom mechanism is not a certified CMP or an automated cookie scanner.
+
 ## Verification and publishing
 Check local links and media, HTML structure, desktop/mobile layout where browser preview is available, image descriptions, and any updated price summaries. Use preview deployment before changing the live domain. Report whether work is local, committed, pushed, previewed, or live accurately.
 
