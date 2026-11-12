@@ -1,7 +1,7 @@
 # A Baker's Confession website
 
 ## Project
-This repository is intended for ukabcompany-oss/ABCwebsite. The live domain is https://abakersconfession.co.uk/. The existing Cloudflare Pages project is a-bakers-confession, but its original source connection is abakersconfession/A-bakers-confession. Do not assume this new repository is connected until Cloudflare confirms a successful deployment from it.
+Repository: ukabcompany-oss/ABCwebsite. Cloudflare Pages project: abcwebsite, connected to main with automatic deployments enabled. Preview/production hostname: https://abcwebsite-e11.pages.dev/. Custom domains: abakersconfession.co.uk and www.abakersconfession.co.uk (activation requested 2026-11-12; verify current status before claiming they are active). The previous project a-bakers-confession is retained as a recovery reference and must not receive new edits.
 
 ## Editing through chat
 The owner can request changes in plain English and attach photos. Handle changes by editing the repository; never put a public, unauthenticated content-editing endpoint on the website.
