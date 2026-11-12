@@ -1,0 +1,29 @@
+name: Import published website once
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/import-website.yml]
+permissions:
+  contents: write
+concurrency:
+  group: website-import
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: Recover published files
+        run: python3 scripts/import_website.py
+      - name: Commit recovered website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Remove the importer and its write-capable workflow after success.
+          rm .github/workflows/import-website.yml scripts/import_website.py scripts/import-inventory.json
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m "Import published website and improve sitemap discovery"
+            git push origin HEAD:main
+          fi
