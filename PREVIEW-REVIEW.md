@@ -20,3 +20,6 @@ Before any future release, remove preview-only noindex headers/meta and preview 
 
 ## Design guidance
 Used the requested nextlevelbuilder/ui-ux-pro-max-skill guidance and design-system search. Applied its hierarchy, visible focus, contrast, touch-target, responsive and reduced-motion rules. Its generic pink soft-UI suggestion did not match the observed reference; chose a dark editorial design with warm gold and serif headings instead.
+
+## Text and hero iteration
+Aligned headings to warm ivory, body text to a lighter warm neutral and actions to gold; testimonial section now keeps the dark theme. Light consent panels retain dark text. Added three cake-photo hero slides with a crossfade, previous/next, pause/play, reduced-motion default pause, and pause on hover, focus and hidden tabs. Manual selection pauses autoplay. Images remain local. SVG arrows replace missing font glyphs.
