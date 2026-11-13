@@ -26,3 +26,6 @@ Aligned headings to warm ivory, body text to a lighter warm neutral and actions 
 
 ## Soft backdrop iteration
 Home story, kind-words and final enquiry now use low-opacity decorative wedding-cake photographs selected from the site's gallery. Hero slides use gallery wedding cakes too. Native anchor scrolling and lightweight section reveals provide motion without taking over mouse/touch scrolling; reduced-motion disables both. Removed the standalone tilted menuslb.webp photo from Menu, retaining its top photo strip and flavour content.
+
+## Five premium quick wins
+Feathered decorative image edges with gradient masks. Hero now uses existing 2831px, 2778px and 2000px-wide photographs, replacing the small originals. Navigation is 13px desktop / 14px mobile, body text 16px. Slideshow controls sit in a separate bar below the hero. On phones, cookie settings stays available in the footer without floating over the image controls. Phone hero spacing and title sizing are tighter. No live-domain changes are authorised.

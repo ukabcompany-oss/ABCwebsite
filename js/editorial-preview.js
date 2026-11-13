@@ -38,7 +38,7 @@ function closeEnlargedImage() {
  const hero=document.querySelector('.ep-hero');
  if(!hero)return;
  const slides=Array.from(hero.querySelectorAll('.ep-hero-slide'));
- const controls=hero.querySelector('.ep-hero-controls');
+ const controls=document.querySelector('.ep-hero-controls');
  if(slides.length<2||!controls)return;
  const previous=controls.querySelector('[data-hero-previous]');
  const next=controls.querySelector('[data-hero-next]');
@@ -49,7 +49,7 @@ function closeEnlargedImage() {
  const sync=()=>{
   clearInterval(timer);timer=null;
   pause.textContent=paused?'Play slideshow':'Pause slideshow';
-  if(!paused&&!hovered&&!hero.contains(document.activeElement)&&!document.hidden){
+  if(!paused&&!hovered&&!hero.contains(document.activeElement)&&!controls.contains(document.activeElement)&&!document.hidden){
    timer=setInterval(()=>show(current+1,false),6500);
   }
  };
@@ -65,6 +65,8 @@ function closeEnlargedImage() {
  hero.addEventListener('mouseenter',()=>{hovered=true;sync();});
  hero.addEventListener('mouseleave',()=>{hovered=false;sync();});
  hero.addEventListener('focusin',sync);
+ controls.addEventListener('focusin',sync);
+ controls.addEventListener('focusout',()=>setTimeout(sync,0));
  hero.addEventListener('focusout',()=>setTimeout(sync,0));
  document.addEventListener('visibilitychange',sync);
  reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;sync();});

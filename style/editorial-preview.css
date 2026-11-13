@@ -63,3 +63,27 @@
 .ep-reveal-pending.ep-is-visible{opacity:1;transform:none}
 @media(max-width:767px){.ep-home .ep-story.ep-backdrop{padding:90px 0;min-height:650px}.ep-story-layout{grid-template-columns:1fr;gap:35px;min-height:0}.ep-scene-pair{gap:0;inset:0 -20%}.ep-scene-pair img{width:50%;opacity:.16;object-fit:cover}.ep-home .ep-quote.ep-backdrop{padding:80px 0}.ep-home .ep-enquire.ep-backdrop{padding:90px 0}.ep-scene-single img{opacity:.15}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ep-reveal-pending{opacity:1;transform:none;transition:none}}
+
+/* Premium quick wins: soft edges, readable type, and a separate control bar. */
+.ep-scene img{-webkit-mask-image:radial-gradient(ellipse at center,#000 35%,#0009 58%,transparent 78%);mask-image:radial-gradient(ellipse at center,#000 35%,#0009 58%,transparent 78%)}
+.ep-header #ep-nav a{font-size:13px;letter-spacing:.09em}.ep-header #ep-nav{gap:26px}
+.ep-home .ep-story-copy p,.ep-home .ep-feature p,.ep-home .ep-cake-card p,.ep-home .ep-process-grid p{font-size:16px;line-height:1.75}
+.ep-secondary .main-div p,.ep-secondary .menu-txt ul li{font-size:16px;line-height:1.7}
+.ep-home .ep-hero-controls{position:relative;inset:auto;width:100%;padding:14px 6%;margin:0;justify-content:flex-end;background:#0b1016;border-bottom:1px solid var(--ep-rule);min-height:72px;z-index:2}
+.ep-home .ep-hero-controls[hidden]{display:none}.ep-hero-slide .ep-hero-photo{object-position:center 46%}
+@media(max-width:1000px){.ep-header #ep-nav a{font-size:14px}}
+@media(max-width:650px){
+ .ep-home .ep-hero{height:auto;min-height:570px;max-height:none;padding:62px 0 54px}
+ .ep-home .ep-hero-copy{padding:0;width:88%}
+ .ep-home .ep-hero h1{font-size:clamp(2.2rem,9.1vw,3.1rem);line-height:1.12}
+ .ep-home .ep-hero .ep-eyebrow{margin-bottom:20px}
+ .ep-home .ep-hero .ep-hero-sub{font-size:16px;line-height:1.6;margin:24px auto;max-width:310px}
+ .ep-home .ep-actions{gap:12px}.ep-home .ep-button{font-size:11px!important;min-height:48px}
+ .ep-home .ep-hero-controls{inset:auto;justify-content:center;flex-wrap:wrap;padding:12px 16px;gap:8px;min-height:76px}
+ .ep-home .ep-hero-controls button{font-size:11px;padding:10px 12px}
+ /* The persistent footer button provides Cookie settings without a floating obstruction. */
+ #abc-consent .abc-cookie-settings{position:static;margin:16px;box-shadow:none}
+ .ep-home .ep-story.ep-backdrop{padding:70px 0;min-height:0}
+ .ep-home .ep-story-layout h2{font-size:2.5rem}
+ .ep-home .ep-scene-pair img{opacity:.16}
+}
