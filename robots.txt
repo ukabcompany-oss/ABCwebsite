@@ -1,5 +1,3 @@
-# A Baker's Confession
+# Test branch only. No sitemap advertised.
 User-agent: *
 Allow: /
-
-Sitemap: https://abakersconfession.co.uk/sitemap.xml
