@@ -43,3 +43,23 @@
 .ep-secondary .main-div :is(.secondary-btn,.outline-btn){background:transparent;color:var(--ep-cream)!important;border-color:var(--ep-gold)}
 .ep-secondary .main-div :is(.abc-embed-notice,.abc-cookie-declaration) :is(p,li,b,em,small,h1,h2,h3,h4){color:#29232a!important}
 .ep-secondary .main-div .pc-color{color:var(--ep-gold)}
+
+/* Soft gallery backdrops: decorative, low opacity, with a protected text layer. */
+.ep-backdrop{position:relative;isolation:isolate;overflow:hidden;background:#0b1016}
+.ep-scene{position:absolute;inset:0;z-index:-2;display:flex;justify-content:center;gap:8%;pointer-events:none}
+.ep-scene img{height:100%;width:46%;max-width:620px;object-fit:contain;object-position:center;opacity:.24;filter:saturate(.75)}
+.ep-backdrop:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0b10167d,transparent 25%,#0b10164d 75%,#0b1016d9),linear-gradient(90deg,#0b10164d,transparent 50%,#0b10164d);pointer-events:none}
+.ep-home .ep-story.ep-backdrop{display:block;width:100%;max-width:none;margin:0;padding:140px 0;min-height:680px}
+.ep-story-layout{display:grid;grid-template-columns:1fr 1fr;gap:110px;align-items:center;min-height:400px}
+.ep-home .ep-story-layout h2{font-size:clamp(2.6rem,4.8vw,4.7rem);line-height:1.15}
+.ep-story-layout .ep-story-copy{max-width:520px}
+.ep-home .ep-backdrop p:not(.ep-eyebrow){color:#eadfD2}
+.ep-home .ep-backdrop .ep-eyebrow{color:#e8b67c}
+.ep-scene-single img{width:100%;max-width:1000px;object-position:center 40%;opacity:.20}
+.ep-home .ep-quote.ep-backdrop{background:#0b1016;padding:110px 0}
+.ep-home .ep-enquire.ep-backdrop{width:100%;padding:125px 0;margin:0}
+.ep-enquire .ep-scene-single img{max-width:1300px;object-fit:cover;opacity:.19;object-position:center 50%}
+.ep-reveal-pending{opacity:.65;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.65,.3,1)}
+.ep-reveal-pending.ep-is-visible{opacity:1;transform:none}
+@media(max-width:767px){.ep-home .ep-story.ep-backdrop{padding:90px 0;min-height:650px}.ep-story-layout{grid-template-columns:1fr;gap:35px;min-height:0}.ep-scene-pair{gap:0;inset:0 -20%}.ep-scene-pair img{width:50%;opacity:.16;object-fit:cover}.ep-home .ep-quote.ep-backdrop{padding:80px 0}.ep-home .ep-enquire.ep-backdrop{padding:90px 0}.ep-scene-single img{opacity:.15}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ep-reveal-pending{opacity:1;transform:none;transition:none}}

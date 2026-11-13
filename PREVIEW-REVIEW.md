@@ -23,3 +23,6 @@ Used the requested nextlevelbuilder/ui-ux-pro-max-skill guidance and design-syst
 
 ## Text and hero iteration
 Aligned headings to warm ivory, body text to a lighter warm neutral and actions to gold; testimonial section now keeps the dark theme. Light consent panels retain dark text. Added three cake-photo hero slides with a crossfade, previous/next, pause/play, reduced-motion default pause, and pause on hover, focus and hidden tabs. Manual selection pauses autoplay. Images remain local. SVG arrows replace missing font glyphs.
+
+## Soft backdrop iteration
+Home story, kind-words and final enquiry now use low-opacity decorative wedding-cake photographs selected from the site's gallery. Hero slides use gallery wedding cakes too. Native anchor scrolling and lightweight section reveals provide motion without taking over mouse/touch scrolling; reduced-motion disables both. Removed the standalone tilted menuslb.webp photo from Menu, retaining its top photo strip and flavour content.

@@ -70,3 +70,15 @@ function closeEnlargedImage() {
  reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;sync();});
  controls.hidden=false;sync();
 })();
+
+// Native scrolling is preserved. Only reveal nearby sections; never trap scrolling.
+(()=>{
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ if(reduced.matches||!('IntersectionObserver' in window))return;
+ const targets=Array.from(document.querySelectorAll('.ep-story-layout > div,.ep-section-head,.ep-cake-card,.ep-feature > div,.ep-process-grid article,.ep-quote .ep-wrap,.ep-enquire .ep-wrap'));
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('ep-is-visible');observer.unobserve(entry.target);}});
+ },{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+ targets.forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('ep-reveal-pending');observer.observe(el);}});
+ reduced.addEventListener('change',()=>{if(reduced.matches){targets.forEach(el=>el.classList.add('ep-is-visible'));observer.disconnect();}});
+})();
