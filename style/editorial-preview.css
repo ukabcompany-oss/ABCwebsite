@@ -34,3 +34,4 @@
 @media(prefers-reduced-motion:reduce){.ep-hero-slide{transition:none}}
 /* Explicit layers keep crossfading images above the hero base colour. */
 .ep-hero-slides{z-index:0}.ep-hero-shade{z-index:1}.ep-hero-copy{position:relative;z-index:2}.ep-hero-controls{z-index:3}.ep-scroll{z-index:3;bottom:85px}
+@media(max-width:650px){.ep-hero-controls{bottom:82px}}
